@@ -1,8 +1,8 @@
 import { useDispatch as useReduxDispatch, useSelector as useReduxSelector } from 'react-redux';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
+import { persistStore } from 'redux-persist';
 //
-import { rootPersistConfig, rootReducer } from './rootReducer';
+import {  rootReducer } from './rootReducer';
 
 // ----------------------------------------------------------------------
 

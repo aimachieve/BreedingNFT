@@ -6,7 +6,7 @@ import { Box, Container, Button, Stack } from '@mui/material';
 import Logo from '../../components/Logo';
 //
 import MainNavbar from './MainNavbar';
-import MainFooter from './MainFooter';
+// import MainFooter from './MainFooter';
 
 // ----------------------------------------------------------------------
 

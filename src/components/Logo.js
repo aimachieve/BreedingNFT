@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 // material
-import { useTheme } from '@mui/material/styles';
+// import { useTheme } from '@mui/material/styles';
 import { Box } from '@mui/material';
 
 // ----------------------------------------------------------------------
@@ -10,10 +10,10 @@ Logo.propTypes = {
 };
 
 export default function Logo({ sx }) {
-  const theme = useTheme();
-  const PRIMARY_LIGHT = theme.palette.primary.light;
-  const PRIMARY_MAIN = theme.palette.primary.main;
-  const PRIMARY_DARK = theme.palette.primary.dark;
+  // const theme = useTheme();
+  // const PRIMARY_LIGHT = theme.palette.primary.light;
+  // const PRIMARY_MAIN = theme.palette.primary.main;
+  // const PRIMARY_DARK = theme.palette.primary.dark;
 
   return (
     <Box>

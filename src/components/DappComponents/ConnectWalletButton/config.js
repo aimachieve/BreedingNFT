@@ -1,12 +1,12 @@
 import { ConnectorNames } from "utils/web3React";
 import Metamask from "./WalletIcons/Metamask.svg";
-import WalletConnect from "./WalletIcons/WalletConnect.svg";
-import TrustWallet from "./WalletIcons/TrustWallet.svg";
-import MathWallet from "./WalletIcons/MathWallet.svg";
-import TokenPocket from "./WalletIcons/TokenPocket.svg";
-import BinanceChain from "./WalletIcons/BinanceChain.svg";
-import SafePal from "./WalletIcons/SafePal.svg";
-import Coin98 from "./WalletIcons/Coin98.svg";
+// import WalletConnect from "./WalletIcons/WalletConnect.svg";
+// import TrustWallet from "./WalletIcons/TrustWallet.svg";
+// import MathWallet from "./WalletIcons/MathWallet.svg";
+// import TokenPocket from "./WalletIcons/TokenPocket.svg";
+// import BinanceChain from "./WalletIcons/BinanceChain.svg";
+// import SafePal from "./WalletIcons/SafePal.svg";
+// import Coin98 from "./WalletIcons/Coin98.svg";
 
 export const connectors = [
   {
