@@ -60,7 +60,7 @@ export default function LandingHero() {
                   <Button href="/research" variant='contained' sx={{ background: 'white', border: '2px solid black', color: '#7414F5', fontSize: '20px', fontFamily: 'Montserrat' }}>
                     Explore
                   </Button>
-                  <Button variant='contained' sx={{ border: '2px solid white', fontSize: '20px', fontFamily: 'Montserrat' }}>
+                  <Button href="/resell" variant='contained' sx={{ border: '2px solid white', fontSize: '20px', fontFamily: 'Montserrat' }}>
                     Resell
                   </Button>
                 </Stack>
