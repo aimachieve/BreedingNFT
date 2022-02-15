@@ -33,12 +33,19 @@ const ContentStyle = styled((props) => <Stack spacing={15} justifyContent="space
   },
 }));
 
+const HeroOverlayStyle = styled(motion.img)({
+  zIndex: 9,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  position: 'absolute'
+});
 // ----------------------------------------------------------------------
 
 export default function Minting() {
   return (
     <RootStyle id="move_top" initial="initial" animate="animate" variants={varFadeInUp}>
-      {/* <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeIn} /> */}
+      <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeInUp} />
 
       <Container maxWidth="lg">
         <ContentStyle>

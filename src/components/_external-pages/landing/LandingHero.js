@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { styled } from '@mui/material/styles';
 import { Button, Container, Typography, Stack, Divider } from '@mui/material';
 //
-import { varWrapEnter, varFadeInUp } from '../../animate';
+import { varWrapEnter, varFadeInUp, varFadeIn } from '../../animate';
 
 // ----------------------------------------------------------------------
 
@@ -33,13 +33,36 @@ const ContentStyle = styled((props) => <Stack direction="row" spacing={5} justif
   },
 }));
 
+const HeroOverlayStyle = styled(motion.img)({
+  zIndex: 9,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  position: 'absolute'
+});
+
+// const HeroImgStyle = styled(motion.img)(({ theme }) => ({
+//   top: 0,
+//   right: 0,
+//   bottom: 0,
+//   zIndex: 8,
+//   width: '100%',
+//   margin: 'auto',
+//   position: 'absolute',
+//   [theme.breakpoints.up('lg')]: {
+//     right: '8%',
+//     width: 'auto',
+//     height: '48vh'
+//   }
+// }));
+
 // ----------------------------------------------------------------------
 
 export default function LandingHero() {
   return (
     <>
       <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
-        {/* <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeIn} /> */}
+        <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeIn} />
 
         <Container maxWidth="lg">
           <ContentStyle>

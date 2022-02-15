@@ -5,6 +5,8 @@ import { Container, Typography, Stack, Divider } from '@mui/material';
 //
 import { varWrapEnter, varFadeInRight, varFadeInUp } from '../../animate';
 
+import ReactPlayer from 'react-player'
+
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
@@ -32,6 +34,13 @@ const ContentStyle = styled((props) => <Stack spacing={5} justifyContent="space-
     textAlign: 'center'
   },
 }));
+const HeroOverlayStyle = styled(motion.img)({
+  zIndex: 9,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  position: 'absolute'
+});
 
 // ----------------------------------------------------------------------
 
@@ -39,7 +48,7 @@ export default function LandingWorks() {
   return (
     <>
       <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
-        {/* <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeIn} /> */}
+        <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeInUp} />
 
         <Container maxWidth="lg">
           <ContentStyle>
@@ -48,7 +57,19 @@ export default function LandingWorks() {
                 <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'MontserratItalic' }}>
                   How Breeding NFT works?
                 </Typography>
-                <img src='/img/home/video.png' alt="vieo" style={{ width: '1000px' }} />
+                {/* <img src='/img/home/video.png' alt="vieo" style={{ width: '1000px' }} /> */}
+                <ReactPlayer
+                  url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                  playing={true}
+                  controls={true}
+                  light={true}
+                  loop={true}
+                  width="100%"
+                  height="600px"
+                  // style={{
+                  //   backgroundColor: 'red'
+                  // }}
+                />
               </Stack>
             </motion.div>
 
@@ -56,13 +77,13 @@ export default function LandingWorks() {
               <Stack direction="row" spacing={3} alignItems="flex-start">
                 {/* Reasearch */}
                 <Stack justifyContent={'center'} spacing={1}>
-                  <img src='/img/home/research.png' alt='research' style={{width: '60px', margin: 'auto'}} />
+                  <img src='/img/home/research.png' alt='research' style={{ width: '60px', margin: 'auto' }} />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
                     1. Research
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    Search among the numerous NFTs and choose basing on the <b style={{color: "#7414F5"}}>price</b> and the <b style={{color: "#7414F5"}}>P.I.</b> (Price Increase)
+                    Search among the numerous NFTs and choose basing on the <b style={{ color: "#7414F5" }}>price</b> and the <b style={{ color: "#7414F5" }}>P.I.</b> (Price Increase)
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
@@ -72,7 +93,7 @@ export default function LandingWorks() {
 
                 {/* Buy */}
                 <Stack justifyContent={'center'} spacing={1}>
-                  <img src='/img/home/buy.png' alt='buy' style={{width: '60px', margin: 'auto'}} />
+                  <img src='/img/home/buy.png' alt='buy' style={{ width: '60px', margin: 'auto' }} />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
                     2. Buy
                   </Typography>
@@ -82,23 +103,23 @@ export default function LandingWorks() {
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    You may find NFT breeders interested in another P.I. for their <b style={{color: "#7414f5"}}>next sale.</b>
+                    You may find NFT breeders interested in another P.I. for their <b style={{ color: "#7414f5" }}>next sale.</b>
                   </Typography>
                 </Stack>
 
                 {/* Resell */}
                 <Stack justifyContent={'center'} spacing={1}>
-                  <img src='/img/home/resell.png' alt='resell' style={{width: '60px', margin: 'auto'}} />
+                  <img src='/img/home/resell.png' alt='resell' style={{ width: '60px', margin: 'auto' }} />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
                     3. Resell
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    By participating in the <b style={{color: "#7414f5"}}>ecosystem</b> and reselling through BreedingNFT. You can constantly repelnish your cryptocurrency wallet.
+                    By participating in the <b style={{ color: "#7414f5" }}>ecosystem</b> and reselling through BreedingNFT. You can constantly repelnish your cryptocurrency wallet.
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    This is breeding of <b style={{color: "#7414f5"}}>NFTs!</b>
+                    This is breeding of <b style={{ color: "#7414f5" }}>NFTs!</b>
                   </Typography>
                 </Stack>
               </Stack>
