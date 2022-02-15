@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 // material
 import { styled } from '@mui/material/styles';
-import { Container, Typography, Stack, Divider } from '@mui/material';
+import { Container, Typography, Stack, Divider, Grid } from '@mui/material';
 //
 import { varWrapEnter, varFadeInRight, varFadeInUp } from '../../animate';
 
@@ -66,69 +66,75 @@ export default function LandingWorks() {
                   loop={true}
                   width="100%"
                   height="600px"
-                  // style={{
-                  //   backgroundColor: 'red'
-                  // }}
+                // style={{
+                //   backgroundColor: 'red'
+                // }}
                 />
               </Stack>
             </motion.div>
 
             <motion.div variants={varFadeInRight}>
-              <Stack direction="row" spacing={3} alignItems="flex-start">
+              <Grid container direction="row" spacing={3} alignItems="flex-start" justifyContent={'center'}>
                 {/* Reasearch */}
-                <Stack justifyContent={'center'} spacing={1}>
-                  <img src='/img/home/research.png' alt='research' style={{ width: '60px', margin: 'auto' }} />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
-                    1. Research
-                  </Typography>
-                  <br />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    Search among the numerous NFTs and choose basing on the <b style={{ color: "#7414F5" }}>price</b> and the <b style={{ color: "#7414F5" }}>P.I.</b> (Price Increase)
-                  </Typography>
-                  <br />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    P.I. is the pepercentage of price increase
-                  </Typography>
-                </Stack>
+                <Grid item xs={12} md={4}>
+                  <Stack justifyContent={'center'} spacing={1}>
+                    <img src='/img/home/research.png' alt='research' style={{ width: '60px', margin: 'auto' }} />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
+                      1. Research
+                    </Typography>
+                    <br />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
+                      Search among the numerous NFTs and choose basing on the <b style={{ color: "#7414F5" }}>price</b> and the <b style={{ color: "#7414F5" }}>P.I.</b> (Price Increase)
+                    </Typography>
+                    <br />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
+                      P.I. is the percentage of price increase
+                    </Typography>
+                  </Stack>
+                </Grid>
 
                 {/* Buy */}
-                <Stack justifyContent={'center'} spacing={1}>
-                  <img src='/img/home/buy.png' alt='buy' style={{ width: '60px', margin: 'auto' }} />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
-                    2. Buy
-                  </Typography>
-                  <br />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    Connect you wallet and buy the NFT you have chosen.
-                  </Typography>
-                  <br />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    You may find NFT breeders interested in another P.I. for their <b style={{ color: "#7414f5" }}>next sale.</b>
-                  </Typography>
-                </Stack>
+                <Grid item xs={12} md={4}>
+                  <Stack justifyContent={'center'} spacing={1}>
+                    <img src='/img/home/buy.png' alt='buy' style={{ width: '60px', margin: 'auto' }} />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
+                      2. Buy
+                    </Typography>
+                    <br />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
+                      Connect your wallet and buy the NFT you have chosen.
+                    </Typography>
+                    <br />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
+                      You may find NFT breeders interested in another P.I. for their <b style={{ color: "#7414f5" }}>next sale.</b>
+                    </Typography>
+                  </Stack>
+                </Grid>
 
                 {/* Resell */}
-                <Stack justifyContent={'center'} spacing={1}>
-                  <img src='/img/home/resell.png' alt='resell' style={{ width: '60px', margin: 'auto' }} />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
-                    3. Resell
-                  </Typography>
-                  <br />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    By participating in the <b style={{ color: "#7414f5" }}>ecosystem</b> and reselling through BreedingNFT. You can constantly repelnish your cryptocurrency wallet.
-                  </Typography>
-                  <br />
-                  <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                    This is breeding of <b style={{ color: "#7414f5" }}>NFTs!</b>
-                  </Typography>
-                </Stack>
-              </Stack>
+                <Grid item xs={12} md={4}>
+                  <Stack justifyContent={'center'} spacing={1}>
+                    <img src='/img/home/resell.png' alt='resell' style={{ width: '60px', margin: 'auto' }} />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontSize: "20px", fontWeight: "bold" }}>
+                      3. Resell
+                    </Typography>
+                    <br />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
+                      By participating in the <b style={{ color: "#7414f5" }}>ecosystem</b> and reselling through BreedingNFT, you can constantly repelnish your cryptocurrency wallet.
+                    </Typography>
+                    <br />
+                    <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
+                      This is breeding of <b style={{ color: "#7414f5" }}>NFTs!</b>
+                    </Typography>
+                  </Stack>
+                </Grid>
+              </Grid>
             </motion.div>
 
             <motion.div variants={varFadeInUp}>
               <Stack justifyContent="space-between" spacing={5} alignItems="center">
                 <Typography sx={{ color: 'common.white', fontSize: '20px', fontFamily: 'Montserrat', fontWeight: 500 }}>
-                  Waht are you waiting for ? Breed NFTs now with Our Community!
+                  What are you waiting for ? Breed NFTs now with Our Community!
                 </Typography>
               </Stack>
             </motion.div>

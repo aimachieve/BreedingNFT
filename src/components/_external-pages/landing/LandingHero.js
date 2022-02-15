@@ -68,14 +68,14 @@ export default function LandingHero() {
           <ContentStyle>
             <motion.div variants={varFadeInUp}>
               <Stack justifyContent="center" spacing={5} mt={5}>
-                <Typography sx={{ color: 'common.white', fontFamily: 'MontserratItalic' }}>
+                <Typography sx={{ color: 'common.white', fontFamily: 'MontserratItalic', fontSize: '20px' }}>
                   Become a NFT Breeder
                 </Typography>
-                <Typography sx={{ color: 'common.white', fontSize: '20px', fontFamily: 'Montserrat', fontWeight: 'bold' }}>
+                <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'Montserrat', fontWeight: 'bold' }}>
                   Buy and resell on BredingNFT only, <br />
                   making a profit through P.I.
                 </Typography>
-                <Typography sx={{ color: 'common.white', fontSize: '20px', fontFamily: 'MontserratItalic' }}>
+                <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'MontserratItalic' }}>
                   An exclusive NFT marketplace that allows anyone <br />
                   to earn
                 </Typography>
@@ -96,15 +96,23 @@ export default function LandingHero() {
                 Join with Our Community
               </Typography>
               <Stack direction="row" justifyContent={'center'} spacing={1} alignItems={'center'}>
-                <img src='/img/home/facebook.png' style={{ width: '60px', height: '60px' }} alt='facebook' />
-                <img src='/img/home/twitter.png' style={{ width: '60px', height: '40px' }} alt='twitter' />
-                <img src='/img/home/instagram.png' style={{ width: '45px', height: '45px' }} alt='instagram' />
-                <img src='/img/home/discord.png' style={{ width: '43px', height: '43px' }} alt='discord' />
+                <a href='https://www.facebook.com/Breeding-NFT-105299172040611' target={'_blank'} rel="noreferrer">
+                  <img src='/img/home/facebook.png' style={{ width: '50px', height: '50px' }} alt='facebook' />
+                </a>
+                <a href='https://twitter.com/BreedingNft' target={'_blank'} rel="noreferrer">
+                  <img src='/img/home/twitter.png' style={{ width: '50px', height: '30px' }} alt='twitter' />
+                </a>
+                <a href='https://www.instagram.com/breedingnft/' target={'_blank'} rel="noreferrer">
+                  <img src='/img/home/instagram.png' style={{ width: '35px', height: '35px' }} alt='instagram' />
+                </a>
+                <a href='https://discord.gg/EHYQxQxKb' target={'_blank'} rel="noreferrer">
+                  <img src='/img/home/discord.png' style={{ width: '35px', height: '35px' }} alt='discord' />
+                </a>
               </Stack>
             </motion.div>
 
           </ContentStyle>
-          <Divider sx={{borderColor: "#7414F5"}}/>
+          <Divider sx={{ borderColor: "#7414F5" }} />
         </Container>
       </RootStyle>
     </>

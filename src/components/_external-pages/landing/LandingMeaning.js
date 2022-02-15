@@ -53,7 +53,7 @@ export default function LandingMining() {
             <motion.div variants={varFadeInRight}>
               <Stack justifyContent="space-between" spacing={5} alignItems="center">
                 <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'MontserratItalic', fontWeight: 'bold' }}>
-                  What does it mean to breed NFTs?
+                  What does it means to breed NFTs?
                 </Typography>
               </Stack>
             </motion.div>
@@ -63,7 +63,7 @@ export default function LandingMining() {
                 {/* Reasearch */}
                 <Stack justifyContent={'center'} spacing={1}>
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
-                    It mean the continuous process of buying and selling a Not Fungible Tokens  <b style={{color: "#7414F5"}}>keeping the price increase constant at earch resale.</b>
+                    It mean the continuous process of buying and selling a Not Fungible Tokens  <b style={{color: "#7414F5"}}>keeping the price increase constant at each resale.</b>
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
@@ -74,11 +74,11 @@ export default function LandingMining() {
                 {/* Resell */}
                 <Stack justifyContent={'center'} spacing={1}>
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
-                    By participating in the <b style={{color: "#7414f5"}}>ecosystem</b> and reselling through BreedingNFT. You can constantly repelnish your cryptocurrency wallet.
+                    With each resale, you will <b style={{color: "#7414f5"}}>earn the P.I on the purchase price.</b>
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
-                    This is breeding of <b style={{color: "#7414f5"}}>NFTs!</b>
+                    For example, if you buy a 100 BUSD NFT with P.I. at 20%, you will resell it for 120 BUSD to <b style={{color: "#7414f5"}}>another NFT breeder interested</b> in marketing an additional P.I. for its future resale.
                   </Typography>
                 </Stack>
               </Stack>

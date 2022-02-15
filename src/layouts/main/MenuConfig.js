@@ -22,7 +22,7 @@ const menuConfig = [
     icon: <Icon icon={homeFill} {...ICON_SIZE} />
   },
   {
-    title: 'Reasearch',
+    title: 'Research',
     path: '/research',
     icon: <Icon icon={homeFill} {...ICON_SIZE} />
   },

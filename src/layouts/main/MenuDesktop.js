@@ -185,10 +185,10 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
       end={path === '/'}
       sx={{
         ...(isHome && { color: 'common.white' }),
-        ...(isOffset && { color: 'text.primary' }),
-        '&.active': {
-          color: 'primary.main'
-        }
+        ...(isOffset && { color: 'common.white' }),
+        // '&.active': {
+        //   color: 'primary.main'
+        // }
       }}
     >
       {title}
