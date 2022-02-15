@@ -70,7 +70,7 @@ export default function LandingFaq() {
                 >
                   <Grid item xs md sx={{ mb: 3 }}>
                     {/* 1 ~ 5 */}
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         1. Is Breeding NFT easy to use?
                       </Link>
                       <br />
@@ -79,7 +79,7 @@ export default function LandingFaq() {
                       </Typography>
                       <br />
 
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         2. Can Breeding NFT go on any devices?
                       </Link>
                       <br />
@@ -89,7 +89,7 @@ export default function LandingFaq() {
                       </Typography>
                       <br />
 
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         3. Why buy/resell on Breeding NFT?
                       </Link>
                       <br />
@@ -99,7 +99,7 @@ export default function LandingFaq() {
                       </Typography>
                       <br />
 
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         4. How do I contact BreedingNFT Customer Service?
                       </Link>
                       <br />
@@ -109,7 +109,7 @@ export default function LandingFaq() {
                       </Typography>
                       <br />
 
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         5. How can I buy and resell NFT?
                       </Link>
                       <br />
@@ -125,7 +125,7 @@ export default function LandingFaq() {
                   <Grid item xs md sx={{ mb: 3 }}>
                     {/* 6 ~ 10 */}
                     {/* <Stack spacing={1} alignItems={'flex-start'}> */}
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         6. What percentage can I resell my NFT?
                       </Link>
                       <br />
@@ -135,7 +135,7 @@ export default function LandingFaq() {
                       </Typography>
                       <br />
 
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         7. Which NFTs can I resell?
                       </Link>
                       <br />
@@ -145,7 +145,7 @@ export default function LandingFaq() {
                       </Typography>
                       <br />
 
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         8. How long does it take to resell a NFT?
                       </Link>
                       <br />
@@ -155,7 +155,7 @@ export default function LandingFaq() {
                       </Typography>
                       <br />
 
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         9. Which cryptocurrencies and wallets are accepted?
                       </Link>
                       <br />
@@ -165,7 +165,7 @@ export default function LandingFaq() {
                       </Typography>
                       <br />
 
-                      <Link component={RouterLink} to="#" sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
+                      <Link component={RouterLink} to="#" sx={{fontWeight: 'bold', fontStyle: 'italic', color: 'common.white', fontFamily: 'Montserrat' }}>
                         10. How can I change my cryptocurrencies for buy here?
                       </Link>
                       <br />
