@@ -96,16 +96,16 @@ export default function LandingHero() {
                 Join with Our Community
               </Typography>
               <Stack direction="row" justifyContent={'center'} spacing={1} alignItems={'center'}>
-                <a href='https://www.facebook.com/Breeding-NFT-105299172040611' target={'_blank'} rel="noreferrer">
+                <a href='https://www.facebook.com/Breeding-NFT-105299172040611/' target={'_blank'} rel="noreferrer">
                   <img src='/img/home/facebook.png' style={{ width: '50px', height: '50px' }} alt='facebook' />
                 </a>
-                <a href='https://twitter.com/BreedingNft' target={'_blank'} rel="noreferrer">
+                <a href='https://twitter.com/BreedingNft/' target={'_blank'} rel="noreferrer">
                   <img src='/img/home/twitter.png' style={{ width: '50px', height: '30px' }} alt='twitter' />
                 </a>
                 <a href='https://www.instagram.com/breedingnft/' target={'_blank'} rel="noreferrer">
                   <img src='/img/home/instagram.png' style={{ width: '35px', height: '35px' }} alt='instagram' />
                 </a>
-                <a href='https://discord.gg/EHYQxQxKb' target={'_blank'} rel="noreferrer">
+                <a href='https://www.reddit.com/user/BreedingNFT/' target={'_blank'} rel="noreferrer">
                   <img src='/img/home/discord.png' style={{ width: '35px', height: '35px' }} alt='discord' />
                 </a>
               </Stack>
