@@ -72,12 +72,11 @@ export default function LandingHero() {
                   Become a NFT Breeder
                 </Typography>
                 <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'Montserrat', fontWeight: 'bold' }}>
-                  Buy and resell on BredingNFT only, <br />
+                  Buy and resell on BreedingNFT only, <br />
                   making a profit through P.I.
                 </Typography>
                 <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'MontserratItalic' }}>
-                  An exclusive NFT marketplace that allows anyone <br />
-                  to earn
+                  An exclusive NFT marketplace that<br /> allows anyone to earn
                 </Typography>
                 <Stack direction="row" spacing={2} justifyContent="space-around">
                   <Button href="/research" variant='contained' sx={{ background: 'white', border: '2px solid black', color: '#7414F5', fontSize: '20px', fontFamily: 'Montserrat' }}>

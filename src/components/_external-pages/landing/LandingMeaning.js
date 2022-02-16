@@ -63,22 +63,22 @@ export default function LandingMining() {
                 {/* Reasearch */}
                 <Stack justifyContent={'center'} spacing={1}>
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
-                    It mean the continuous process of buying and selling a Not Fungible Tokens  <b style={{color: "#7414F5"}}>keeping the price increase constant at each resale.</b>
+                    It mean the continuous process of<br /> buying and selling a Not Fungible<br /> Tokens  <b style={{color: "#7414F5"}}>keeping the price increase<br /> constant at each resale.</b>
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
-                    For each NFT purchased and resold, <b style={{color: "#7414F5"}}>the price always goes up</b> and never goes down.
+                    For each NFT purchased and resold,<br /> <b style={{color: "#7414F5"}}>the price always goes up</b> and never<br /> goes down.
                   </Typography>
                 </Stack>
 
                 {/* Resell */}
                 <Stack justifyContent={'center'} spacing={1}>
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
-                    With each resale, you will <b style={{color: "#7414f5"}}>earn the P.I on the purchase price.</b>
+                    With each resale, you will <b style={{color: "#7414f5"}}>earn the<br /> P.I on the purchase price.</b>
                   </Typography>
                   <br />
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat' }}>
-                    For example, if you buy a 100 BUSD NFT with P.I. at 20%, you will resell it for 120 BUSD to <b style={{color: "#7414f5"}}>another NFT breeder interested</b> in marketing an additional P.I. for its future resale.
+                    For example, if you buy a 100 BUSD <br/> NFT with P.I. at 20%, you will resell it<br /> for 120 BUSD to <b style={{color: "#7414f5"}}>another NFT<br /> breeder interested</b> in marketing an<br/> additional P.I. for its future resale.
                   </Typography>
                 </Stack>
               </Stack>
