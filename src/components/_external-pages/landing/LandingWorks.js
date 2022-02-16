@@ -120,7 +120,7 @@ export default function LandingWorks() {
                     </Typography>
                     <br />
                     <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
-                      By participating in the <b style={{ color: "#7414f5" }}>ecosystem</b> and reselling through BreedingNFT, you can constantly repelnish your cryptocurrency wallet.
+                      By participating in the <b style={{ color: "#7414f5" }}>ecosystem</b> and reselling through BreedingNFT, you can constantly replenish your cryptocurrency wallet.
                     </Typography>
                     <br />
                     <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: "left" }}>
