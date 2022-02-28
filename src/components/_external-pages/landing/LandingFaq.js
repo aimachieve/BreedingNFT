@@ -61,7 +61,6 @@ export default function LandingFaq() {
 
             <motion.div variants={varFadeInRight}>
               <Stack direction="row" spacing={3} justifyContent="space-between" alignItems="flex-start">
-
                 <Grid
                   container
                   justifyContent={{ xs: 'center', md: 'space-between' }}

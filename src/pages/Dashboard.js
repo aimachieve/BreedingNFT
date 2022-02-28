@@ -49,21 +49,18 @@ export default function Dashboard() {
 
       <Container maxWidth="lg">
         <ContentStyle>
-          <motion.div variants={varFadeInRight}>
-            <img src='/img/dashboard/chart.png' alt='chart' />
-          </motion.div>
-
           {/* NFTs sold */}
           <motion.div variants={varFadeInRight}>
             <Grid
               container
               justifyContent={{ xs: 'center', md: 'space-between' }}
+              alignItems="center"
               sx={{ textAlign: { xs: 'center', md: 'left' } }}
               spacing={3}
             >
-              <Grid item xs md spacing={15} p={2}>
+              <Grid item xs md p={2}>
                 <Stack alignItems="center" justifyContent={'center'}>
-                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: '300px', mb: 5 }}>
+                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', }, mb: 5 }}>
                     <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px', borderBottom: "1px solid #7414f5" }}>
                       NEW NFTs SOLD
                     </Typography>
@@ -71,7 +68,7 @@ export default function Dashboard() {
                       103
                     </Typography>
                   </Stack>
-                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: '300px', mb: 5 }}>
+                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', }, mb: 5 }}>
                     <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px', borderBottom: "1px solid #7414f5" }}>
                       EARNING FROM NEW NFTs SOLD
                     </Typography>
@@ -84,9 +81,9 @@ export default function Dashboard() {
 
               <Divider orientation="vertical" flexItem sx={{ borderColor: "#7414F5" }} />
 
-              <Grid item xs md spacing={15} p={2}>
+              <Grid item xs md p={2}>
                 <Stack alignItems="center" justifyContent={'center'}>
-                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: '300px', mb: 5 }}>
+                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', }, mb: 5 }}>
                     <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px', borderBottom: "1px solid #7414f5" }}>
                       RESELLED NFTs
                     </Typography>
@@ -94,7 +91,7 @@ export default function Dashboard() {
                       915
                     </Typography>
                   </Stack>
-                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: '300px', mb: 5 }}>
+                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', }, mb: 5 }}>
                     <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px', borderBottom: "1px solid #7414f5" }}>
                       EARNING FROM ROYALTIES
                     </Typography>
@@ -112,10 +109,8 @@ export default function Dashboard() {
             <Grid
               container
               direction="row"
-              justifyContent={{ xs: 'center', md: 'space-between' }}
               alignItems="center"
               sx={{ textAlign: { xs: 'center', md: 'left' }, border: "2px solid #7414f5", borderRadius: '10px' }}
-              spacing={3}
             >
               <Grid item xs={12} md={6} sx={{ borderRight: "1px solid #7414f5" }}>
                 <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: 'center', fontWeight: 'bold' }}>

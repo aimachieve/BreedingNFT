@@ -56,7 +56,7 @@ export default function Minting() {
               sx={{ textAlign: { xs: 'center', md: 'left' } }}
               spacing={3}
             >
-              <Grid item xs={12} md={6} spacing={15} p={2}>
+              <Grid item xs={12} md={6} p={2}>
                 <img src="/img/dashboard/upload.png" alt="NFt" />
               </Grid>
 

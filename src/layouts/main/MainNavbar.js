@@ -1,7 +1,7 @@
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 // material
 import { styled } from '@mui/material/styles';
-import { AppBar, Toolbar, Container, Hidden, TextField, InputAdornment  } from '@mui/material';
+import { AppBar, Toolbar, Container, Hidden, TextField, InputAdornment } from '@mui/material';
 // hooks
 import useOffSetTop from '../../hooks/useOffSetTop';
 // components
@@ -63,7 +63,7 @@ export default function MainNavbar() {
         }}
       >
         <Container
-          maxWidth="100%"
+          // maxWidth="100%"
           sx={{
             display: 'flex',
             alignItems: 'center',
@@ -74,27 +74,28 @@ export default function MainNavbar() {
             <Logo />
           </RouterLink>
 
-          <TextField
-            id="input-with-icon-textfield"
-            placeholder='Find NFTs..'
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            }}
-          />
 
           <Hidden mdDown>
+            <TextField
+              id="input-with-icon-textfield"
+              placeholder='Find NFTs..'
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
             <MenuDesktop isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
+
+            <ConnectWalletButton />
           </Hidden>
 
           <Hidden mdUp>
             <MenuMobile isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
           </Hidden>
 
-          <ConnectWalletButton />
         </Container>
       </ToolbarStyle>
 

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 // material
 import { styled } from '@mui/material/styles';
-import { Button, Container, Typography, Stack, Divider } from '@mui/material';
+import { Button, Container, Typography, Stack, Divider, Grid } from '@mui/material';
 //
 import { varWrapEnter, varFadeInUp, varFadeIn } from '../../animate';
 
@@ -66,50 +66,54 @@ export default function LandingHero() {
 
         <Container maxWidth="lg">
           <ContentStyle>
-            <motion.div variants={varFadeInUp}>
-              <Stack justifyContent="center" spacing={5} mt={5}>
-                <Typography sx={{ color: 'common.white', fontFamily: 'MontserratItalic', fontSize: '20px' }}>
-                  Become a NFT Breeder
-                </Typography>
-                <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'Montserrat', fontWeight: 'bold' }}>
-                  Buy and resell on BreedingNFT only, <br />
-                  making a profit through P.I.
-                </Typography>
-                <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'MontserratItalic' }}>
-                  An exclusive NFT marketplace that<br /> allows anyone to earn
-                </Typography>
-                <Stack direction="row" spacing={2} justifyContent="space-around">
-                  <Button href="/research" variant='contained' sx={{ background: 'white', border: '2px solid black', color: '#7414F5', fontSize: '20px', fontFamily: 'Montserrat' }}>
-                    Explore
-                  </Button>
-                  <Button href="/resell" variant='contained' sx={{ border: '2px solid white', fontSize: '20px', fontFamily: 'Montserrat' }}>
-                    Resell
-                  </Button>
-                </Stack>
-              </Stack>
-            </motion.div>
-
-            <motion.div variants={varFadeInUp}>
-              <img src='/img/home/3d_card.png' alt='3d-card' />
-              <Typography sx={{ color: 'common.white', fontFamily: 'MontserratItalic' }}>
-                Join with Our Community
-              </Typography>
-              <Stack direction="row" justifyContent={'center'} spacing={1} alignItems={'center'}>
-                <a href='https://www.facebook.com/Breeding-NFT-105299172040611/' target={'_blank'} rel="noreferrer">
-                  <img src='/img/home/facebook.png' style={{ width: '50px', height: '50px' }} alt='facebook' />
-                </a>
-                <a href='https://twitter.com/BreedingNft/' target={'_blank'} rel="noreferrer">
-                  <img src='/img/home/twitter.png' style={{ width: '50px', height: '30px' }} alt='twitter' />
-                </a>
-                <a href='https://www.instagram.com/breedingnft/' target={'_blank'} rel="noreferrer">
-                  <img src='/img/home/instagram.png' style={{ width: '35px', height: '35px' }} alt='instagram' />
-                </a>
-                <a href='https://www.reddit.com/user/BreedingNFT/' target={'_blank'} rel="noreferrer">
-                  <img src='/img/home/discord.png' style={{ width: '35px', height: '35px' }} alt='discord' />
-                </a>
-              </Stack>
-            </motion.div>
-
+            <Grid container direction="row" spacing={3} alignItems="flex-start" justifyContent={'center'}>
+              <Grid item xs={12} md={6}>
+                <motion.div variants={varFadeInUp}>
+                  <Stack justifyContent="center" spacing={5} mt={5}>
+                    <Typography sx={{ color: 'common.white', fontFamily: 'MontserratItalic', fontSize: '20px' }}>
+                      Become a NFT Breeder
+                    </Typography>
+                    <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'Montserrat', fontWeight: 'bold' }}>
+                      Buy and resell on BreedingNFT only, <br />
+                      making a profit through P.I.
+                    </Typography>
+                    <Typography sx={{ color: 'common.white', fontSize: '25px', fontFamily: 'MontserratItalic' }}>
+                      An exclusive NFT marketplace that<br /> allows anyone to earn
+                    </Typography>
+                    <Stack direction="row" spacing={2} justifyContent="space-around">
+                      <Button href="/research" variant='contained' sx={{ background: 'white', border: '2px solid black', color: '#7414F5', fontSize: '20px', fontFamily: 'Montserrat' }}>
+                        Explore
+                      </Button>
+                      <Button href="/resell" variant='contained' sx={{ border: '2px solid white', fontSize: '20px', fontFamily: 'Montserrat' }}>
+                        Resell
+                      </Button>
+                    </Stack>
+                  </Stack>
+                </motion.div>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <motion.div variants={varFadeInUp}>
+                  <img src='/img/home/3d_card.png' alt='3d-card' />
+                  <Typography sx={{ color: 'common.white', fontFamily: 'MontserratItalic' }}>
+                    Join with Our Community
+                  </Typography>
+                  <Stack direction="row" justifyContent={'center'} spacing={1} alignItems={'center'}>
+                    <a href='https://www.facebook.com/Breeding-NFT-105299172040611/' target={'_blank'} rel="noreferrer">
+                      <img src='/img/home/facebook.png' style={{ width: '50px', height: '50px' }} alt='facebook' />
+                    </a>
+                    <a href='https://twitter.com/BreedingNft/' target={'_blank'} rel="noreferrer">
+                      <img src='/img/home/twitter.png' style={{ width: '50px', height: '30px' }} alt='twitter' />
+                    </a>
+                    <a href='https://www.instagram.com/breedingnft/' target={'_blank'} rel="noreferrer">
+                      <img src='/img/home/instagram.png' style={{ width: '35px', height: '35px' }} alt='instagram' />
+                    </a>
+                    <a href='https://www.reddit.com/user/BreedingNFT/' target={'_blank'} rel="noreferrer">
+                      <img src='/img/home/discord.png' style={{ width: '35px', height: '35px' }} alt='discord' />
+                    </a>
+                  </Stack>
+                </motion.div>
+              </Grid>
+            </Grid>
           </ContentStyle>
           <Divider sx={{ borderColor: "#7414F5" }} />
         </Container>

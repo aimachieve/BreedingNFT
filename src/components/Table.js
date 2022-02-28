@@ -43,7 +43,7 @@ const rows = [
 export default function CustomizedTables() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700, border: '1px solid #7414f5' }} aria-label="customized table">
+      <Table sx={{ width: '100%', border: '1px solid #7414f5' }} aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>DATE</StyledTableCell>

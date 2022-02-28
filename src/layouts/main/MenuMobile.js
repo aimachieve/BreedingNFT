@@ -12,6 +12,7 @@ import { Box, List, Link, Drawer, Collapse, ListItemText, ListItemIcon, ListItem
 import Logo from '../../components/Logo';
 import NavSection from '../../components/NavSection';
 import Scrollbar from '../../components/Scrollbar';
+import ConnectWalletButton from 'components/DappComponents/ConnectWalletButton';
 
 // ----------------------------------------------------------------------
 
@@ -158,7 +159,6 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
       <IconButton
         onClick={handleDrawerOpen}
         sx={{
-          ml: 1,
           ...(isHome && { color: 'common.white' }),
           ...(isOffset && { color: 'text.primary' })
         }}
@@ -182,6 +182,8 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
               <MenuMobileItem key={link.title} item={link} isOpen={open} onOpen={handleOpen} />
             ))}
           </List>
+          
+          <ConnectWalletButton sx={{m: 3}} />
         </Scrollbar>
       </Drawer>
     </>

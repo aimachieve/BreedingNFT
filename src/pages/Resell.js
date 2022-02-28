@@ -54,10 +54,8 @@ export default function Resell() {
             <Grid
               container
               direction="row"
-              justifyContent={{ xs: 'center', md: 'space-between' }}
               alignItems="center"
               sx={{ textAlign: { xs: 'center', md: 'left' }, border: "2px solid #7414f5", borderRadius: '10px' }}
-              spacing={3}
             >
               <Grid item xs={12} md={6} sx={{ borderRight: "1px solid #7414f5" }}>
                 <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', textAlign: 'center', fontWeight: 'bold' }}>
@@ -82,12 +80,10 @@ export default function Resell() {
           <motion.div variants={varFadeInRight}>
             <Grid
               container
-              justifyContent={{ xs: 'center', md: 'space-between' }}
               sx={{ textAlign: { xs: 'center', md: 'left' } }}
-              spacing={3}
             >
-              <Grid item xs={12} md={6} spacing={15} p={2}>
-                <img src="/img/resell/NFT.png" alt="NFt" />
+              <Grid item xs={12} md={6} p={2}>
+                <img src="/img/resell/NFT.png" alt="NFt" style={{width: '100%', height: '100%'}} />
               </Grid>
 
               <Grid item xs={12} md={6} mt={3}>
@@ -95,7 +91,7 @@ export default function Resell() {
                   Sad monkey
                 </Typography>
                 {/* Price */}
-                <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: '300px', mb: 5 }}>
+                <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', md: '300px'}, mb: 5 }} >
                   <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '20px', borderBottom: "1px solid #7414f5" }}>
                     RESELL PRICE
                   </Typography>
@@ -104,7 +100,7 @@ export default function Resell() {
                   </Typography>
                 </Stack>
                 {/* P.I. */}
-                <Stack direction="row" spacing={13} sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: '300px', mb: 5 }} alignItems="center">
+                <Stack direction="row" spacing={13} sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', md: '300px'}, mb: 5 }} alignItems="center">
                   <Typography sx={{ color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '20px', p: '10px', borderRight: "1px solid #7414f5", width: "150px" }}>
                     P.I.
                   </Typography>
@@ -121,13 +117,12 @@ export default function Resell() {
           <motion.div variants={varFadeInRight}>
             <Grid
               container
-              justifyContent={{ xs: 'center', md: 'space-between' }}
               sx={{ textAlign: { xs: 'center', md: 'left' } }}
-              spacing={3}
+              spacing={1}
               mb={2}
             >
-              <Grid item xs={12} md={6} spacing={15} p={5}>
-                <Stack sx={{ border: '2px solid #7414f5', borderRadius: '25px' }}>
+              <Grid item xs={12} md={6} >
+                <Stack sx={{ border: '2px solid #7414f5', borderRadius: '25px', width: '100%' }}>
                   <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '20px', borderBottom: "1px solid #7414f5" }}>
                     DETAILS
                   </Typography>
@@ -179,8 +174,8 @@ export default function Resell() {
                 </Stack>
               </Grid>
 
-              <Grid item xs={12} md={6} p={5}>
-                <Stack sx={{ border: '2px solid #7414f5', borderRadius: '25px' }}>
+              <Grid item xs={12} md={6} >
+                <Stack sx={{ border: '2px solid #7414f5', borderRadius: '25px', width: '100%' }}>
                   <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '20px', borderBottom: "1px solid #7414f5" }}>
                     DESCRIPTION
                   </Typography>

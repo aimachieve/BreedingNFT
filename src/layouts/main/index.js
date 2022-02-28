@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll';
 import { useLocation, Outlet } from 'react-router-dom';
 // material
@@ -6,13 +7,25 @@ import { Box, Container, Button, Stack } from '@mui/material';
 import Logo from '../../components/Logo';
 //
 import MainNavbar from './MainNavbar';
-// import MainFooter from './MainFooter';
+import TermsModal from '../terms'
+import PrivacyModal from '../privacy'
 
 // ----------------------------------------------------------------------
 
 export default function MainLayout() {
   const { pathname } = useLocation();
   const isHome = pathname === '/';
+  
+  const [openTerms, setOpenTerms] = useState(false)
+  const [openPrivacy, setOpenPrivacy] = useState(false)
+  
+  const handleOpenTerms = () => {
+    setOpenTerms(true)
+  }
+  const handleClose = (value) => {
+    setOpenTerms(false)
+    setOpenPrivacy(false)
+  }
 
   return (
     <>
@@ -36,8 +49,8 @@ export default function MainLayout() {
                 <Logo sx={{ mb: 1, mx: 'auto', cursor: 'pointer' }} />
               </ScrollLink>
               <Stack direction="row" spacing={1}>
-                <Button variant="text"> Privacy Policy </Button>
-                <Button variant="text"> Terms of Service </Button>
+                <Button variant="text" onClick={() => {setOpenPrivacy(true)}}> Privacy Policy </Button>
+                <Button variant="text" onClick={handleOpenTerms}> Terms of Service </Button>
               </Stack>
             </Stack>
           </Container>
@@ -63,6 +76,16 @@ export default function MainLayout() {
           </Container>
         </Box>
       )}
+
+      <TermsModal
+        open={openTerms}
+        onClose={handleClose}
+      />
+
+      <PrivacyModal
+        open={openPrivacy}
+        onClose={handleClose}
+      />
     </>
   );
 }
