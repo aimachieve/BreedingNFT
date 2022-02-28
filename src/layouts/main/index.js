@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll';
-import { useLocation, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 // material
 import { Box, Container, Button, Stack } from '@mui/material';
 // components
@@ -13,12 +13,10 @@ import PrivacyModal from '../privacy'
 // ----------------------------------------------------------------------
 
 export default function MainLayout() {
-  const { pathname } = useLocation();
-  const isHome = pathname === '/';
-  
+
   const [openTerms, setOpenTerms] = useState(false)
   const [openPrivacy, setOpenPrivacy] = useState(false)
-  
+
   const handleOpenTerms = () => {
     setOpenTerms(true)
   }
@@ -34,48 +32,25 @@ export default function MainLayout() {
         <Outlet />
       </div>
 
-      {!isHome ? (
-        // <MainFooter />
-        <Box
-          sx={{
-            textAlign: 'center',
-            position: 'relative',
-            bgcolor: 'background.default'
-          }}
-        >
-          <Container maxWidth="lg">
-            <Stack direction="row" justifyContent={'space-between'} alignItems="center">
-              <ScrollLink to="move_top" spy smooth>
-                <Logo sx={{ mb: 1, mx: 'auto', cursor: 'pointer' }} />
-              </ScrollLink>
-              <Stack direction="row" spacing={1}>
-                <Button variant="text" onClick={() => {setOpenPrivacy(true)}}> Privacy Policy </Button>
-                <Button variant="text" onClick={handleOpenTerms}> Terms of Service </Button>
-              </Stack>
+      <Box
+        sx={{
+          textAlign: 'center',
+          position: 'relative',
+          bgcolor: 'background.default'
+        }}
+      >
+        <Container maxWidth="lg">
+          <Stack direction="row" justifyContent={'space-between'} alignItems="center">
+            <ScrollLink to="move_top" spy smooth>
+              <Logo sx={{ mb: 1, mx: 'auto', cursor: 'pointer' }} />
+            </ScrollLink>
+            <Stack direction="row" spacing={1}>
+              <Button variant="text" onClick={() => { setOpenPrivacy(true) }}> Privacy Policy </Button>
+              <Button variant="text" onClick={handleOpenTerms}> Terms of Service </Button>
             </Stack>
-          </Container>
-        </Box>
-      ) : (
-        <Box
-          sx={{
-            textAlign: 'center',
-            position: 'relative',
-            bgcolor: 'background.default'
-          }}
-        >
-          <Container maxWidth="lg">
-            <Stack direction="row" justifyContent={'space-between'} alignItems="center">
-              <ScrollLink to="move_top" spy smooth>
-                <Logo sx={{ mb: 1, mx: 'auto', cursor: 'pointer' }} />
-              </ScrollLink>
-              <Stack direction="row" spacing={1}>
-                <Button variant="text"> Privacy Policy </Button>
-                <Button variant="text"> Terms of Service </Button>
-              </Stack>
-            </Stack>
-          </Container>
-        </Box>
-      )}
+          </Stack>
+        </Container>
+      </Box>
 
       <TermsModal
         open={openTerms}
