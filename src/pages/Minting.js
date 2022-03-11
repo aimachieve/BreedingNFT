@@ -163,7 +163,7 @@ export default function Minting() {
       setMintingApproved(true);
     } catch (error) {
       console.error("Error:", error);
-      enqueueSnackbar(MetamaskErrorMessage(error), {
+      enqueueSnackbar(error, {
         variant: "error",
       });
       setMintingApproved(false);
