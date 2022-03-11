@@ -214,7 +214,7 @@ export default function Minting() {
     };
 
     checkMintingAllowance()
-  }, [account])
+  }, [account, BUSDContract])
 
   return (
     <RootStyle id="move_top" initial="initial" animate="animate" variants={varFadeInUp}>

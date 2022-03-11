@@ -51,17 +51,17 @@ const HeroOverlayStyle = styled(motion.img)({
 // ----------------------------------------------------------------------
 
 export default function Research() {
-  const { account } = useWeb3React();
+  // const { account } = useWeb3React();
   const NFTContract = useNFTContract(process.env.REACT_APP_NFT_CONTRACT_ADDRESS)
   console.log("NFT COntract=>", NFTContract)
 
-  const [totalSupply, setTotalSupply] = useState(0)
+  // const [totalSupply, setTotalSupply] = useState(0)
   const [NFTs, setNFTs] = useState(null)
 
   useEffect(() => {
     const init = async () => {
       const totalSupply = await NFTContract.totalSupply()
-      setTotalSupply(formatBigNumber(totalSupply))
+      // setTotalSupply(formatBigNumber(totalSupply))
       console.log("totlaSupply=>", formatBigNumber(totalSupply))
 
       const data = []
@@ -74,7 +74,7 @@ export default function Research() {
     }
 
     init()
-  }, [])
+  })
 
   return (
     <RootStyle id="move_top" initial="initial" animate="animate" variants={varFadeInUp}>

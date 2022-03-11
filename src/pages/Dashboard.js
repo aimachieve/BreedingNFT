@@ -1,12 +1,10 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion';
 // material
 import { styled } from '@mui/material/styles';
 import { Container, Typography, Stack, TextField, Grid, Button, Divider } from '@mui/material';
 //
 import { varFadeInUp, varFadeInRight } from '../components/animate';
-import { create } from 'ipfs-http-client'
-import { useWeb3React } from "@web3-react/core";
 
 // ----------------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useWeb3React } from "@web3-react/core";
 import { useNavigate } from "react-router-dom";
 
