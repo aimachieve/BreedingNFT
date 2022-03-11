@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function AdminGuard({ children }) {
   const { account } = useWeb3React();
   const navigate = useNavigate();
-  const isAdmin = (account === process.env.REACT_APP_ADMINWALLET);
+  const isAdmin = (account === process.env.REACT_APP_DAVIDE_WALLET);
   if (!isAdmin) {
     navigate("/");
   }

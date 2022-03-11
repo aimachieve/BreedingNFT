@@ -6,6 +6,7 @@ import MainLayout from "./layouts/main";
 // import LogoOnlyLayout from "./layouts/LogoOnlyLayout";
 // components
 // import LoadingScreen from "./components/LoadingScreen";
+import Admin2Guard from "./guards/Admin2Guard"
 import Homepage from "pages/Homepage";
 import Research from "pages/Research";
 import Resell from "pages/Resell";
@@ -31,8 +32,22 @@ export default function Router() {
         { path: "/", element: <Homepage /> },
         { path: "/research", element: <Research /> },
         { path: "/resell", element: <Resell /> },
-        { path: "/dashboard", element: <Dashboard /> },
-        { path: "/dashboard/minting", element: <Minting /> }
+        { 
+          path: "/dashboard", 
+          element: (
+            <Admin2Guard>
+              <Dashboard />
+            </Admin2Guard>
+          ) 
+        },
+        { 
+          path: "/dashboard/minting", 
+          element: (
+            <Admin2Guard>
+              <Minting />
+            </Admin2Guard>
+          ) 
+        }
       ],
     },
   ]);

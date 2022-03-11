@@ -1,9 +1,12 @@
+import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion';
 // material
 import { styled } from '@mui/material/styles';
 import { Container, Typography, Stack, TextField, Grid, Button, Divider } from '@mui/material';
 //
 import { varFadeInUp, varFadeInRight } from '../components/animate';
+import { create } from 'ipfs-http-client'
+import { useWeb3React } from "@web3-react/core";
 
 // ----------------------------------------------------------------------
 
@@ -60,7 +63,7 @@ export default function Dashboard() {
             >
               <Grid item xs md p={2}>
                 <Stack alignItems="center" justifyContent={'center'}>
-                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', }, mb: 5 }}>
+                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: { xs: '100%', }, mb: 5 }}>
                     <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px', borderBottom: "1px solid #7414f5" }}>
                       NEW NFTs SOLD
                     </Typography>
@@ -68,7 +71,7 @@ export default function Dashboard() {
                       103
                     </Typography>
                   </Stack>
-                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', }, mb: 5 }}>
+                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: { xs: '100%', }, mb: 5 }}>
                     <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px', borderBottom: "1px solid #7414f5" }}>
                       EARNING FROM NEW NFTs SOLD
                     </Typography>
@@ -83,7 +86,7 @@ export default function Dashboard() {
 
               <Grid item xs md p={2}>
                 <Stack alignItems="center" justifyContent={'center'}>
-                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', }, mb: 5 }}>
+                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: { xs: '100%', }, mb: 5 }}>
                     <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px', borderBottom: "1px solid #7414f5" }}>
                       RESELLED NFTs
                     </Typography>
@@ -91,7 +94,7 @@ export default function Dashboard() {
                       915
                     </Typography>
                   </Stack>
-                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: {xs: '100%', }, mb: 5 }}>
+                  <Stack sx={{ border: '2px solid #7414f5', borderRadius: '10px', width: { xs: '100%', }, mb: 5 }}>
                     <Typography sx={{ p: 1, color: 'common.white', fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px', borderBottom: "1px solid #7414f5" }}>
                       EARNING FROM ROYALTIES
                     </Typography>

@@ -7,6 +7,7 @@ import LogoutModal from "./LogoutModal";
 
 export default function ConnectWalletButton({ sx }) {
   const { account } = useWeb3React();
+  console.log("account =>", account)
   const [openLogin, setOpenLogin] = useState(false);
   const [openLogout, setOpenLogout] = useState(false);
   const { login, logout } = useAuth();

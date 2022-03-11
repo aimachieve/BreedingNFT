@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import ERC20Abi from "contracts/abi/ERC20Abi.json";
+import NFTAbi from "contracts/abi/NFTAbi.json";
 import { getContract } from "utils";
 import useActiveWeb3React from "./useActiveWeb3React";
 // returns null on errors
@@ -25,6 +26,9 @@ function useContract(address, ABI, withSignerIfPossible = true) {
 
 export function useTokenContract(tokenAddress, withSignerIfPossible = true) {
   return useContract(tokenAddress, ERC20Abi, withSignerIfPossible);
+}
+export function useNFTContract(NFTAddress, withSignerIfPossible = true) {
+  return useContract(NFTAddress, NFTAbi, withSignerIfPossible);
 }
 
 // export function useStakeContract(withSignerIfPossible = true) {

@@ -8,6 +8,7 @@ import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 // material
 import { styled } from '@mui/material/styles';
 import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardActionArea } from '@mui/material';
+import { useWeb3React } from '@web3-react/core';
 
 // ----------------------------------------------------------------------
 
@@ -62,6 +63,8 @@ function IconBullet({ type = 'item' }) {
 
 function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
   const { title, path, children } = item;
+  const { account } = useWeb3React()
+  console.log(process.env.REACT_APP_DAVIDE_WALLET)
 
   if (children) {
     return (
@@ -186,6 +189,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
       sx={{
         ...(isHome && { color: 'common.white' }),
         ...(isOffset && { color: 'common.white' }),
+        ...(title === 'Dashboard' && account !== process.env.REACT_APP_DAVIDE_WALLET  && { display: 'none'})
         // '&.active': {
         //   color: 'primary.main'
         // }
