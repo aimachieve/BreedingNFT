@@ -10,7 +10,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Card from '../components/Card'
 // Contract
 import { useNFTContract } from '../hooks/useContract'
-import { useWeb3React } from "@web3-react/core";
+// import { useWeb3React } from "@web3-react/core";
 import { formatBigNumber } from 'utils/formatNumber';
 
 // ----------------------------------------------------------------------
@@ -74,7 +74,7 @@ export default function Research() {
     }
 
     init()
-  })
+  }, [])
 
   return (
     <RootStyle id="move_top" initial="initial" animate="animate" variants={varFadeInUp}>

@@ -9,8 +9,10 @@ export default function MultiActionAreaCard({uri}) {
   console.log("uri=>", uri)
   const [data, setData] = useState(null)
 
+  // const flag = 0;
+
   useEffect(() => {
-    console.log("useEffect")
+    console.log(uri)
     fetch(uri)
       .then(res => res.json())
       .then(resJson => {
@@ -20,9 +22,7 @@ export default function MultiActionAreaCard({uri}) {
       .catch(err => {
         console.log("err =>", err)
       })
-  }, [uri])
-
-  console.log("data=>", data)
+  }, [])
 
   return (
     <Card sx={{ maxWidth: 220, margin: '20px' }}>
@@ -30,25 +30,25 @@ export default function MultiActionAreaCard({uri}) {
         <CardMedia
           component="img"
           height="140"
-          image={data.image}
+          image={data && data.image}
           alt="NFT Image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {data.name}
+            {data && data.name}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            {data.pi}
+            {data && data.pi}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {data.description}
+            {data && data.description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Stack direction="row" spacing={10} justifyContent={'space-around'} alignItems={'center'}>
           <Typography gutterBottom variant="h6" component="div">
-            {data.price}
+            {data && data.price}
           </Typography>
           <Button variant="contained" sx={{ border: '1px solid black' }}>BUY</Button>
         </Stack>
