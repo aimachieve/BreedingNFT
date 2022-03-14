@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router'
 import { motion } from 'framer-motion';
 // material
 import { styled } from '@mui/material/styles';
@@ -89,9 +89,7 @@ export default function Assets() {
           </Typography>
           <Stack direction={'row'} flexWrap={'wrap'} alignItems="center" justifyContent={'center'}>
             {
-              NFTs ?
-                
-              map((NFT, i) => (
+              NFTs ? NFTs.map((NFT, i) => (
                   <motion.div variants={varFadeInUp} key={i}>
                     <Card NFT={NFT} />
                   </motion.div>
