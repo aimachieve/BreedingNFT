@@ -13,6 +13,7 @@ import Logo from '../../components/Logo';
 import NavSection from '../../components/NavSection';
 import Scrollbar from '../../components/Scrollbar';
 import ConnectWalletButton from 'components/DappComponents/ConnectWalletButton';
+import { useWeb3React } from '@web3-react/core';
 
 // ----------------------------------------------------------------------
 
@@ -39,6 +40,7 @@ MenuMobileItem.propTypes = {
 
 function MenuMobileItem({ item, isOpen, onOpen }) {
   const { title, path, icon, children } = item;
+  const { account } = useWeb3React()
 
   if (children) {
     return (
@@ -115,7 +117,8 @@ function MenuMobileItem({ item, isOpen, onOpen }) {
           color: 'primary.main',
           fontWeight: 'fontWeightMedium',
           bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity)
-        }
+        },
+        ...(title === 'Dashboard' && account !== process.env.REACT_APP_DAVIDE_WALLET  && { display: 'none'})
       }}
     >
       <ListItemIcon>{icon}</ListItemIcon>

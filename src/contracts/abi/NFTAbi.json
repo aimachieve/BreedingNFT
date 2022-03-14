@@ -248,6 +248,11 @@
     "name": "getNFT",
     "outputs": [
       {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      },
+      {
         "internalType": "string",
         "name": "",
         "type": "string"

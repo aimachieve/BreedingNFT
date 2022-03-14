@@ -9,6 +9,7 @@ import MainLayout from "./layouts/main";
 import Admin2Guard from "./guards/Admin2Guard"
 import Homepage from "pages/Homepage";
 import Research from "pages/Research";
+import Assets from "pages/Assets";
 import Resell from "pages/Resell";
 import Dashboard from "pages/Dashboard";
 import Minting from "pages/Minting";
@@ -30,6 +31,7 @@ export default function Router() {
       element: <MainLayout />,
       children: [
         { path: "/", element: <Homepage /> },
+        { path: "/assets", element: <Assets /> },
         { path: "/research", element: <Research /> },
         { path: "/resell", element: <Resell /> },
         { 

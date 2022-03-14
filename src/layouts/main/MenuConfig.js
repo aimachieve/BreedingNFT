@@ -18,7 +18,7 @@ const menuConfig = [
   },
   {
     title: 'My Assets',
-    path: '/',
+    path: '/assets',
     icon: <Icon icon={homeFill} {...ICON_SIZE} />
   },
   {

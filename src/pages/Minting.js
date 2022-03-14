@@ -9,6 +9,7 @@ import { create } from 'ipfs-http-client'
 import { useNFTContract, useTokenContract } from '../hooks/useContract'
 import { useWeb3React } from "@web3-react/core";
 import { useSnackbar } from "notistack";
+import { MetamaskErrorMessage } from "utils/MetamaskErrorMessage";
 
 import { ethers } from "ethers";
 // const key = process.env.REACT_APP_PINATA_KEY;
@@ -131,10 +132,13 @@ export default function Minting() {
     if (metaData.name === "" || metaData.description === "" || metaData.price === 0 || metaData.pi === 0 || imageUrl === "") {
       alert("Please fill all the fileds!")
     } else {
+      setMetadataButton("Uploading metadata...")
       const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`;
+      console.log(process.env.REACT_APP_PINATA_KEY, process.env.REACT_APP_PINATA_SECRET)
       //making axios POST request to Pinata ⬇️
       axios.post(url, JSONBody, {
         headers: {
+          'Content-Type': 'application/json',
           pinata_api_key: process.env.REACT_APP_PINATA_KEY,
           pinata_secret_api_key: process.env.REACT_APP_PINATA_SECRET
         }
@@ -145,6 +149,7 @@ export default function Minting() {
           setDisable(false);
         })
         .catch(function (error) {
+          console.log("error:", error)
           setMetadataButton("metadata upload fail ⬇️, try again later!", error.message);
         });
     }
@@ -152,6 +157,7 @@ export default function Minting() {
 
   const handleMintingApprove = async () => {
     try {
+      console.log("handleMintingApprove invoked!")
       const mintingApprovedResult = await BUSDContract.approve(
         process.env.REACT_APP_NFT_CONTRACT_ADDRESS,
         ethers.constants.MaxUint256
@@ -178,16 +184,22 @@ export default function Minting() {
     console.log("number price=>", Number(metaData.price))
 
     setMintButton("NFT is minting now...")
-    const result = await NFTContract.mintNFT(
-      account,
-      metadataUrl,
-      Number(metaData.price),
-      Number(metaData.pi)
-    )
-    enqueueSnackbar("WOW, One NFT was sucessufully minted!", {
-      variant: "success",
-    })
-    console.log("mint result=>", result)
+    try {
+      const result = await NFTContract.mintNFT(
+        account,
+        metadataUrl,
+        Number(metaData.price),
+        Number(metaData.pi)
+      )
+      enqueueSnackbar("WOW, One NFT was sucessufully minted!", {
+        variant: "success",
+      })
+    } catch (error) {
+      console.log("error: ", error)
+      enqueueSnackbar(MetamaskErrorMessage(error), {
+        variant: "error"
+      })
+    }
 
     init()
   }
@@ -200,7 +212,7 @@ export default function Minting() {
           process.env.REACT_APP_NFT_CONTRACT_ADDRESS
         );
         const allowedBalance = ethers.utils.formatUnits(result);
-        
+
         console.log("allowedBalance =>", allowedBalance)
         if (allowedBalance > 0) {
           setMintingApproved(true);

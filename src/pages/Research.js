@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion';
 // material
 import { styled } from '@mui/material/styles';
@@ -7,11 +8,12 @@ import { Container, Typography, Stack, TextField, Grid, Button } from '@mui/mate
 import { varFadeInUp, varFadeInRight } from '../components/animate';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import Card from '../components/Card'
+import Card from '../components/Card_Research'
 // Contract
 import { useNFTContract } from '../hooks/useContract'
 // import { useWeb3React } from "@web3-react/core";
 import { formatBigNumber } from 'utils/formatNumber';
+import { useSnackbar } from "notistack";
 
 // ----------------------------------------------------------------------
 
@@ -54,9 +56,9 @@ export default function Research() {
   // const { account } = useWeb3React();
   const NFTContract = useNFTContract(process.env.REACT_APP_NFT_CONTRACT_ADDRESS)
   console.log("NFT COntract=>", NFTContract)
-
-  // const [totalSupply, setTotalSupply] = useState(0)
   const [NFTs, setNFTs] = useState(null)
+  const { enqueueSnackbar } = useSnackbar();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const init = async () => {
@@ -66,15 +68,18 @@ export default function Research() {
 
       const data = []
       for (var i = 1; i <= formatBigNumber(totalSupply); i++) {
-        const tokenURI = await NFTContract.getNFT(i)
-        data.push(tokenURI)
+        const NFT = await NFTContract.getNFT(i)
+        console.log([...NFT, i])
+        data.push([...NFT, i])
       }
-      setNFTs(data)
+
+      if (data.length > 0)
+        setNFTs(data)
       console.log("NFTs state=>", NFTs)
     }
 
     init()
-  }, [])
+  }, [pathname])
 
   return (
     <RootStyle id="move_top" initial="initial" animate="animate" variants={varFadeInUp}>
@@ -135,9 +140,9 @@ export default function Research() {
               <Grid item xs={12} md={9}>
                 <Stack direction={'row'} flexWrap={'wrap'} alignItems="center" justifyContent={'center'}>
                   {
-                    NFTs && NFTs.map((uri, i) => (
+                    NFTs && NFTs.map((NFT, i) => (
                       <motion.div variants={varFadeInUp} key={i}>
-                        <Card uri={uri} />
+                        <Card NFT={NFT} />
                       </motion.div>
                     ))
                   }
