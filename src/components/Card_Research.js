@@ -130,14 +130,14 @@ export default function Card_Research({ NFT }) {
       <CardActions>
         <Stack direction="row" spacing={10} justifyContent={'space-around'} alignItems={'center'}>
           <Typography gutterBottom variant="h6" component="div">
-            {data && data.price} BUSD
+            {NFT[2]} BUSD
           </Typography>
 
           {mintingApproved ? (
-            <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => { buyNFT(NFT[2], Number(data.price)) }}>
+            <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => { buyNFT(NFT[3], Number(NFT[2])) }}>
               Buy
             </Button>) : (
-            <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => handleMintingApprove(NFT[2])}>Approve</Button>
+            <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => handleMintingApprove(NFT[3])}>Approve</Button>
           )}
         </Stack>
       </CardActions>

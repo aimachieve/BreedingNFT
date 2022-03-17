@@ -71,9 +71,9 @@ export default function MultiActionAreaCard({ NFT }) {
       <CardActions>
         <Stack direction="row" spacing={10} justifyContent={'space-around'} alignItems={'center'}>
           <Typography gutterBottom variant="h6" component="div">
-            {data && data.price} BUSD
+            {NFT[2]} BUSD
           </Typography>
-          <Button variant="contained" disabled={NFT[0]} sx={{ border: '1px solid black' }} onClick={() => {resellNFT(NFT[2])}} >Resell</Button>
+          <Button variant="contained" disabled={NFT[0]} sx={{ border: '1px solid black' }} onClick={() => {resellNFT(NFT[3])}} >Resell</Button>
         </Stack>
       </CardActions>
     </Card>

@@ -126,7 +126,6 @@ export default function Research() {
                 {/* Status P.I. */}
                 <Stack spacing={2} sx={{ borderBottom: "solid 3px #7414f5" }} pb={1} mb={3}>
                   <Button variant="contained" sx={{ background: "white", color: 'black' }}>New</Button>
-                  <Button variant="contained" sx={{ background: "white", color: 'black' }}>Discounted</Button>
                   <Button variant="contained" sx={{ background: "white", color: 'black' }}>Reselled</Button>
                   <Button variant="contained" sx={{ background: "white", color: 'black' }}>Most viewed</Button>
                 </Stack>

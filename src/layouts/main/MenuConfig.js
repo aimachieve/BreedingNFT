@@ -26,11 +26,11 @@ const menuConfig = [
     path: '/research',
     icon: <Icon icon={homeFill} {...ICON_SIZE} />
   },
-  {
-    title: 'Resell',
-    path: '/resell',
-    icon: <Icon icon={homeFill} {...ICON_SIZE} />
-  },
+  // {
+  //   title: 'Resell',
+  //   path: '/resell',
+  //   icon: <Icon icon={homeFill} {...ICON_SIZE} />
+  // },
   { title: 'Dashboard', path: '/dashboard', icon: <Icon icon={fileFill} {...ICON_SIZE} /> }
 ];
 
