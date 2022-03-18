@@ -46,7 +46,7 @@ export default function LandingMining() {
   return (
     <>
       <RootStyle initial="initial" animate="animate" variants={varFadeInUp}>
-      <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeInUp} />
+      <HeroOverlayStyle alt="overlay" src="/img/overlay.svg" variants={varFadeInUp} />
 
         <Container maxWidth="lg">
           <ContentStyle>

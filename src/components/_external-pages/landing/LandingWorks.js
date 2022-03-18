@@ -48,7 +48,7 @@ export default function LandingWorks() {
   return (
     <>
       <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
-        <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeInUp} />
+        <HeroOverlayStyle alt="overlay" src="/img/overlay.svg" variants={varFadeInUp} />
 
         <Container maxWidth="lg">
           <ContentStyle>

@@ -46,7 +46,7 @@ const HeroOverlayStyle = styled(motion.img)({
 export default function Resell() {
   return (
     <RootStyle id="move_top" initial="initial" animate="animate" variants={varFadeInUp}>
-      <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeInUp} />
+      <HeroOverlayStyle alt="overlay" src="/img/overlay.svg" variants={varFadeInUp} />
 
       <Container maxWidth="lg">
         <ContentStyle>
