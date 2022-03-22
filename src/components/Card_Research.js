@@ -135,10 +135,10 @@ export default function Card_Research({ NFT }) {
           </Typography>
 
           {mintingApproved ? (
-            <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => { buyNFT(NFT[3], formatBigNumber(NFT[2])) }}>
+            <Button variant="contained" disabled={!account} sx={{ border: '1px solid black' }} onClick={() => { buyNFT(NFT[3], formatBigNumber(NFT[2])) }}>
               {account ? 'Buy' : 'Connect wallet ⬆️'}
             </Button>) : (
-            <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => handleMintingApprove(NFT[3])}>
+            <Button variant="contained" disabled={!account} sx={{ border: '1px solid black' }} onClick={() => handleMintingApprove(NFT[3])}>
               {account ? 'Approve' : 'Connect wallet ⬆️'}
             </Button>
           )}
