@@ -69,6 +69,7 @@ export default function Research() {
       const data = []
       for (var i = 1; i <= formatBigNumber(totalSupply); i++) {
         const NFT = await NFTContract.getNFT(i)
+        console.log("Contract getNFT=>", NFT)
         console.log([...NFT, i])
         data.push([...NFT, i])
       }
