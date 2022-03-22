@@ -59,6 +59,7 @@ export default function Research() {
   const [NFTs, setNFTs] = useState(null)
   const { enqueueSnackbar } = useSnackbar();
   const { pathname } = useLocation();
+  console.log("pathname=>", pathname)
 
   useEffect(() => {
     const init = async () => {

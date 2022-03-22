@@ -8,6 +8,7 @@ import { Button, CardActionArea, CardActions, Stack, Divider } from '@mui/materi
 import { useNFTContract, useTokenContract } from '../hooks/useContract'
 import { MetamaskErrorMessage } from "utils/MetamaskErrorMessage";
 import { useSnackbar } from "notistack";
+import { formatBigNumber } from '../utils/formatNumber';
 
 export default function MultiActionAreaCard({ NFT }) {
   console.log("NFT =>", NFT)
@@ -71,7 +72,7 @@ export default function MultiActionAreaCard({ NFT }) {
       <CardActions>
         <Stack direction="row" spacing={10} justifyContent={'space-around'} alignItems={'center'}>
           <Typography gutterBottom variant="h6" component="div">
-            {NFT[2]} BUSD
+            {formatBigNumber(NFT[2]).toFixed(2)} BUSD
           </Typography>
           <Button variant="contained" disabled={NFT[0]} sx={{ border: '1px solid black' }} onClick={() => {resellNFT(NFT[3])}} >Resell</Button>
         </Stack>

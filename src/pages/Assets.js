@@ -57,6 +57,7 @@ export default function Assets() {
 
   const [NFTs, setNFTs] = useState(null)
   const { pathname } = useLocation();
+  console.log("pathname=>", pathname)
 
   useEffect(() => {
     console.log("useState")

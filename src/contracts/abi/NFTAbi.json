@@ -256,6 +256,11 @@
         "internalType": "string",
         "name": "",
         "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -324,19 +329,6 @@
       }
     ],
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "base_uri",
-        "type": "address"
-      }
-    ],
-    "name": "newBaseURI",
-    "outputs": [],
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {

@@ -11,6 +11,7 @@ import { MetamaskErrorMessage } from "utils/MetamaskErrorMessage";
 import { useSnackbar } from "notistack";
 import { ethers } from "ethers";
 import { useWeb3React } from "@web3-react/core";
+import { formatBigNumber } from '../utils/formatNumber';
 
 export default function Card_Research({ NFT }) {
   console.log("NFT =>", NFT)
@@ -130,11 +131,11 @@ export default function Card_Research({ NFT }) {
       <CardActions>
         <Stack direction="row" spacing={10} justifyContent={'space-around'} alignItems={'center'}>
           <Typography gutterBottom variant="h6" component="div">
-            {NFT[2]} BUSD
+            {formatBigNumber(NFT[2]).toFixed(2)} BUSD
           </Typography>
 
           {mintingApproved ? (
-            <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => { buyNFT(NFT[3], Number(NFT[2])) }}>
+            <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => { buyNFT(NFT[3], formatBigNumber(NFT[2])) }}>
               {account ? 'Buy' : 'Connect wallet ⬆️'}
             </Button>) : (
             <Button variant="contained" sx={{ border: '1px solid black' }} onClick={() => handleMintingApprove(NFT[3])}>
